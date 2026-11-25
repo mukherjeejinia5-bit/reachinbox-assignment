@@ -20,7 +20,7 @@ useEffect(() => {
 
   setLoadingEmails(true);
 
-  fetch(`http://localhost:5000/api/emails?status=${status}`)
+fetch(`https://reachinbox-assignment-w2x8.onrender.com/api/emails?status=${status}`)
     .then((res) => res.json())
     .then((data) => {
       setEmailList(data.emails || []);
@@ -67,7 +67,7 @@ useEffect(() => {
 
   const scheduleEmail = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/schedule", {
+     const response = await fetch("https://reachinbox-assignment-w2x8.onrender.com/api/schedule", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -98,7 +98,7 @@ useEffect(() => {
 </p>
 
 <a
-  href="http://localhost:5000/auth/google"
+  href="https://reachinbox-assignment-w2x8.onrender.com/auth/google"
   className="mt-5 inline-block rounded-lg bg-red-600 px-6 py-3 text-white"
 >
   Sign in with Google
